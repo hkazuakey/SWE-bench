@@ -8,7 +8,7 @@
         <link rel="canonical" href="https://swe-bench.com/reference/harness/">
       
       
-        <link rel="prev" href="../../guides/create_rag_datasets/">
+        <link rel="prev" href="../cli/">
       
       
         <link rel="next" href="../inference/">
@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/swellama.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -798,6 +798,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -977,6 +1005,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#result-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Caching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dataset-options" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1079,34 +1118,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../versioning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Versioning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1123,8 +1134,6 @@
   
     
     
-      
-        
       
         
       
@@ -1216,34 +1225,6 @@
     
   
     Inference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/versioning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Versioning
   
 
     
@@ -1408,6 +1389,17 @@
     <span class="md-ellipsis">
       
         Cache Levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Caching
       
     </span>
   </a>
@@ -1626,6 +1618,14 @@
 </tbody>
 </table>
 <p>Most users should use the default <code>env</code> level, which provides a good balance between speed and storage usage.</p>
+<h2 id="result-caching">Result Caching</h2>
+<p>The evaluation harness caches evaluation results by <code>run_id</code> and <code>instance_id</code>. This means:</p>
+<ul>
+<li>If you run the same instance with the same <code>run_id</code> multiple times, the harness will reuse the cached results from the first run</li>
+<li><strong>The cache does not consider the prediction diff content</strong> - even if you provide a different prediction diff for the same <code>run_id</code> and <code>instance_id</code>, the harness will return the cached results without re-evaluating</li>
+<li>To re-evaluate an instance with a different prediction diff, you must use a different <code>run_id</code></li>
+</ul>
+<p>This caching behavior is designed to speed up repeated evaluations, but it's important to be aware that changing the prediction diff alone will not trigger a re-evaluation.</p>
 <h2 id="dataset-options">Dataset Options</h2>
 <p>The harness supports evaluation on various SWE-bench datasets:</p>
 <ul>
@@ -1678,7 +1678,7 @@
 <li><code>logs/build_images</code>: Docker build logs</li>
 <li><code>logs/run_evaluation</code>: Evaluation run logs</li>
 </ul>
-<p>Final evaluation results are stored in the <code>evaluation_results</code> directory.</p>
+<p>The run summary is written to <code>&lt;model&gt;.&lt;run_id&gt;.json</code> in the directory you ran from, and per-instance logs to <code>logs/run_evaluation/</code>.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If you encounter issues:</p>
 <ol>
@@ -1720,7 +1720,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../guides/create_rag_datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create RAG Datasets">
+          <a href="../cli/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CLI">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1730,7 +1730,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Create RAG Datasets
+                CLI
               </div>
             </div>
           </a>
@@ -1783,7 +1783,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

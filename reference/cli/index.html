@@ -5,28 +5,28 @@
       
       
       
-        <link rel="canonical" href="https://swe-bench.com/reference/versioning/">
+        <link rel="canonical" href="https://swe-bench.com/reference/cli/">
       
       
-        <link rel="prev" href="../inference/">
+        <link rel="prev" href="../../guides/create_rag_datasets/">
       
       
-        <link rel="next" href="../../api/harness/">
+        <link rel="next" href="../harness/">
       
       
         
       
       
       <link rel="icon" href="../../assets/swellama.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Versioning - SWE-bench</title>
+        <title>CLI - SWE-bench</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#versioning-system" class="md-skip">
+        <a href="#command-line-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Versioning
+              CLI
             
           </span>
         </div>
@@ -798,6 +798,214 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swebench-eval-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench eval DATASET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-report-run_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench report RUN_ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-check-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset check TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-build-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset build TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-diff-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset diff TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-push-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset push TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-collect-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset collect REPOS...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#older-invocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Older invocations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -850,164 +1058,6 @@
 
               
             
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Versioning
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Versioning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-versioning-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How Versioning Works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools-for-version-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools for Version Management
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tools for Version Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-purpose-tool-get_versionspy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General Purpose Tool: get_versions.py
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repository-specific-version-extraction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repository-Specific Version Extraction
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-with-evaluation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration with Evaluation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1024,8 +1074,6 @@
   
     
     
-      
-        
       
         
       
@@ -1130,34 +1178,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/versioning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Versioning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1200,44 +1220,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#evaluate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Evaluate
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-versioning-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How Versioning Works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools-for-version-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools for Version Management
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tools for Version Management">
+    <nav class="md-nav" aria-label="Evaluate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-purpose-tool-get_versionspy" class="md-nav__link">
+  <a href="#swebench-eval-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General Purpose Tool: get_versions.py
+        swebench eval DATASET
       
     </span>
   </a>
@@ -1245,21 +1243,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#swebench-report-run_id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repository-specific-version-extraction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repository-Specific Version Extraction
+        swebench report RUN_ID
       
     </span>
   </a>
@@ -1272,10 +1259,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-with-evaluation" class="md-nav__link">
+  <a href="#images" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Integration with Evaluation
+        Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-check-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset check TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-build-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset build TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-diff-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset diff TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-push-task_repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset push TASK_REPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swebench-dataset-collect-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swebench dataset collect REPOS...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#older-invocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Older invocations
       
     </span>
   </a>
@@ -1299,7 +1369,7 @@
 
 
   
-    <a href="https://github.com/SWE-bench/SWE-bench/edit/main/docs/reference/versioning.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/SWE-bench/SWE-bench/edit/main/docs/reference/cli.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -1307,50 +1377,128 @@
   
 
 
-<h1 id="versioning-system">Versioning System</h1>
-<div class="admonition note">
-<p class="admonition-title">Create Training Data</p>
-<p>If you interested in creating tasks for training models to solve software engineering tasks,
-check out <a href="https://swesmith.com/">SWE-smith</a> (<a href="https://github.com/SWE-bench/SWE-smith">Code</a>, <a href="https://swesmith.com/assets/paper.pdf">Paper</a>).</p>
-<p>SWE-smith is a toolkit for creating execution environments and SWE-bench style task instances at scale.</p>
-<p>It is designed to be highly compatible with <a href="https://github.com/SWE-agent/SWE-agent">SWE-agent</a>,
-to generate training data, and SWE-bench for evaluation.</p>
-</div>
-<h2 id="overview">Overview</h2>
-<p>SWE-bench assigns each task instance a specific <code>version</code> with respect to its repository. This version information is crucial for ensuring reproducible execution-based evaluation, as it determines the exact installation instructions needed for that repository.</p>
-<h2 id="how-versioning-works">How Versioning Works</h2>
-<p>When task instances are created, they are assigned a version based on the repository's state at the time of issue creation. This version information enables the evaluation harness to set up the correct environment for testing the proposed patch.</p>
-<h2 id="tools-for-version-management">Tools for Version Management</h2>
-<h3 id="general-purpose-tool-get_versionspy">General Purpose Tool: <code>get_versions.py</code></h3>
-<p>The <code>get_versions.py</code> script is a general-purpose tool for retrieving version information. It can obtain versions through two methods:</p>
-<ol>
-<li>Reading directly from the GitHub repository</li>
-<li>Building the repository locally and locating appropriate version files</li>
-</ol>
-<p>The script assigns each task instance a new <code>version: &lt;value&gt;</code> key/value pair in its metadata.</p>
-<h3 id="usage">Usage</h3>
-<p>The script can be invoked via the <code>run_get_version.sh</code> wrapper script:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>get_versions.py<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--instances_path<span class="w">   </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>folder<span class="o">]</span><span class="w"> </span>Path<span class="w"> </span>to<span class="w"> </span>candidate<span class="w"> </span>task<span class="w"> </span>instances<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--retrieval_method<span class="w"> </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>choice<span class="o">]</span><span class="w"> </span>Method<span class="w"> </span>to<span class="w"> </span>retrieve<span class="w"> </span>versions<span class="w"> </span><span class="o">(</span><span class="s2">"build"</span>,<span class="w"> </span><span class="s2">"mix"</span>,<span class="w"> </span>or<span class="w"> </span><span class="s2">"github"</span><span class="o">)</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cleanup<span class="w">          </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>bool<span class="o">]</span><span class="w">   </span>Remove<span class="w"> </span>testbed<span class="w"> </span>and<span class="w"> </span>conda<span class="w"> </span>environments<span class="w"> </span>upon<span class="w"> </span>task<span class="w"> </span>completion<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--conda_env<span class="w">        </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>str<span class="o">]</span><span class="w">    </span>Name<span class="w"> </span>of<span class="w"> </span>conda<span class="w"> </span>environment<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>task<span class="w"> </span>installation<span class="w"> </span>within<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--num_workers<span class="w">      </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>int<span class="o">]</span><span class="w">    </span>Number<span class="w"> </span>of<span class="w"> </span>processes<span class="w"> </span>to<span class="w"> </span>parallelize<span class="w"> </span>on<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--path_conda<span class="w">       </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>folder<span class="o">]</span><span class="w"> </span>Path<span class="w"> </span>to<span class="w"> </span>miniconda<span class="w"> </span>or<span class="w"> </span>anaconda<span class="w"> </span>installation<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--output_dir<span class="w">       </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>folder<span class="o">]</span><span class="w"> </span>Path<span class="w"> </span>to<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>write<span class="w"> </span>versioned<span class="w"> </span>task<span class="w"> </span>instances<span class="w"> </span>to<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--testbed<span class="w">          </span><span class="o">[</span>Required<span class="o">]</span><span class="w"> </span><span class="o">[</span>folder<span class="o">]</span><span class="w"> </span>Path<span class="w"> </span>to<span class="w"> </span>testbed<span class="w"> </span>directory,<span class="w"> </span><span class="k">for</span><span class="w"> </span>cloning<span class="w"> </span>GitHub<span class="w"> </span>repos<span class="w"> </span>to
+<h1 id="command-line-interface">Command line interface</h1>
+<p>Installing the package provides a <code>swebench</code> command. Every command takes
+<code>-h/--help</code>, and the top level takes <code>-v/--verbose</code>.</p>
+<p><code>DATASET</code> accepts an alias, a HuggingFace id, or a local path:</p>
+<table>
+<thead>
+<tr>
+<th>alias</th>
+<th>dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>full</code></td>
+<td><code>SWE-bench/SWE-bench</code></td>
+</tr>
+<tr>
+<td><code>verified</code></td>
+<td><code>SWE-bench/SWE-bench_Verified</code></td>
+</tr>
+<tr>
+<td><code>multimodal</code></td>
+<td><code>SWE-bench/SWE-bench_Multimodal</code></td>
+</tr>
+<tr>
+<td><code>multilingual</code></td>
+<td><code>SWE-bench/SWE-bench_Multilingual</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="evaluate">Evaluate</h2>
+<h3 id="swebench-eval-dataset"><code>swebench eval DATASET</code></h3>
+<p>Run the reference patches or a model's predictions.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span><span class="nb">eval</span><span class="w"> </span>verified<span class="w"> </span>--gold
+swebench<span class="w"> </span><span class="nb">eval</span><span class="w"> </span>verified<span class="w"> </span>-p<span class="w"> </span>preds.jsonl<span class="w"> </span>--run-id<span class="w"> </span>gpt5<span class="w"> </span>-j<span class="w"> </span><span class="m">16</span>
+swebench<span class="w"> </span><span class="nb">eval</span><span class="w"> </span>multimodal<span class="w"> </span>--gold<span class="w"> </span>-i<span class="w"> </span>carbon-design-system__carbon-10188
+swebench<span class="w"> </span><span class="nb">eval</span><span class="w"> </span>full<span class="w"> </span>--gold<span class="w"> </span>--modal
 </code></pre></div>
-<h3 id="repository-specific-version-extraction">Repository-Specific Version Extraction</h3>
-<p>For certain repositories, SWE-bench provides specialized scripts in the <code>extract_web/</code> directory that crawl the package's website to find versions and their cutoff dates.</p>
-<p>These scripts (like <code>get_versions_*.py</code>) can be adapted to other repositories to check task instances' <code>creation_date</code> against the version dates.</p>
-<h2 id="integration-with-evaluation">Integration with Evaluation</h2>
-<p>The version information is used by the evaluation harness to:</p>
-<ol>
-<li>Set up the correct Docker environment for each task</li>
-<li>Install the proper dependencies based on the version</li>
-<li>Ensure consistent evaluation conditions across runs</li>
-</ol>
-<p>This versioning system is a key component in making SWE-bench evaluations reproducible and reliable. </p>
+<p>Pass exactly one of <code>--gold</code> or <code>-p/--predictions</code>. <code>-i/--instance</code> is
+repeatable, <code>-j/--workers</code> sets parallelism, <code>-t/--timeout</code> is per instance.</p>
+<h3 id="swebench-report-run_id"><code>swebench report RUN_ID</code></h3>
+<p>Recompute verdicts from a finished run's saved logs, without starting
+containers. Useful after a log-parser fix, since the test output is already on
+disk.</p>
+<p>The dataset comes from the run itself, recorded at evaluation time in
+<code>logs/run_evaluation/&lt;run_id&gt;/run.json</code>. Pass <code>-d</code> for runs made before that was
+added, or to grade against a different dataset on purpose.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>report<span class="w"> </span>my-run<span class="w">                     </span><span class="c1"># dataset taken from the run itself</span>
+swebench<span class="w"> </span>report<span class="w"> </span>my-run<span class="w"> </span>-d<span class="w"> </span>multimodal<span class="w"> </span>-i<span class="w"> </span>grommet__grommet-6282
+</code></pre></div>
+<h2 id="images">Images</h2>
+<p>Images are built from a task repo: each task carries its own Dockerfile, and its
+<code>task.yaml</code> names the image the dataset will tell the harness to pull. Narrow
+with <code>-i</code>, which can name a task in an unpublished split.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>images<span class="w"> </span>build<span class="w"> </span>~/swe-bench-tasks<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span>
+swebench<span class="w"> </span>images<span class="w"> </span>build<span class="w"> </span>~/swe-bench-multimodal-tasks<span class="w"> </span>-i<span class="w"> </span>carbon-design-system__carbon-10188
+swebench<span class="w"> </span>images<span class="w"> </span>build<span class="w"> </span>~/swe-bench-tasks<span class="w"> </span>--dry-run
+
+swebench<span class="w"> </span>images<span class="w"> </span>check<span class="w"> </span>~/swe-bench-tasks<span class="w">    </span><span class="c1"># which images are missing from the registry</span>
+swebench<span class="w"> </span>images<span class="w"> </span>push<span class="w">  </span>~/swe-bench-tasks<span class="w">    </span><span class="c1"># publish them, under the names task.yaml declares</span>
+swebench<span class="w"> </span>images<span class="w"> </span>clean<span class="w"> </span>--run-id<span class="w"> </span>my-run<span class="w">      </span><span class="c1"># remove leftover containers</span>
+</code></pre></div>
+<p><code>images check</code> is worth running before a long evaluation: it catches a stale or
+partially-pushed image set in seconds rather than one instance at a time.
+<code>images push --dry-run</code> prints the exact <code>docker push</code> commands and stops.</p>
+<h2 id="datasets">Datasets</h2>
+<p>A task repo holds one directory per instance:</p>
+<div class="highlight"><pre><span></span><code>sweb.yaml                    the dataset this repo publishes, and its splits
+tasks/&lt;instance_id&gt;/
+    task.yaml                short metadata, including which split the task is in
+    tests.json               the tests that decide whether a patch resolved it
+    problem_statement.md     the issue text shown to a model
+    hints.md                 discussion from the issue, absent when there is none
+    gold.patch               the reference fix
+    test.patch               the tests that grade it
+    eval.sh                  the script the harness runs
+    Dockerfile               the image it runs in
+    assets/                  binary files a patch cannot carry
+</code></pre></div>
+<p>The tree is the source of truth. Nothing below reads HuggingFace to build the
+dataset, so a new dataset can be developed entirely locally.</p>
+<h3 id="swebench-dataset-check-task_repo"><code>swebench dataset check TASK_REPO</code></h3>
+<p>Check that a task repo is well formed: every task has its files, its metadata,
+and a split registered in <code>sweb.yaml</code>. This runs automatically before building
+or publishing, so a malformed tree is never published.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>dataset<span class="w"> </span>check<span class="w"> </span>~/swe-bench-tasks
+swebench<span class="w"> </span>dataset<span class="w"> </span>check<span class="w"> </span>~/swe-bench-tasks<span class="w"> </span>--fix<span class="w">   </span><span class="c1"># write back what the tree implies</span>
+</code></pre></div>
+<p><code>--fix</code> only writes what can be derived from the tree itself: the split list in
+<code>sweb.yaml</code>, and image names that follow the naming convention. It never
+invents data it cannot see.</p>
+<h3 id="swebench-dataset-build-task_repo"><code>swebench dataset build TASK_REPO</code></h3>
+<p>Compile the repo into one parquet per split.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>dataset<span class="w"> </span>build<span class="w"> </span>~/swe-bench-multilingual-tasks
+swebench<span class="w"> </span>dataset<span class="w"> </span>build<span class="w"> </span>~/swe-bench-tasks<span class="w"> </span>-o<span class="w"> </span>/tmp/parquets
+</code></pre></div>
+<h3 id="swebench-dataset-diff-task_repo"><code>swebench dataset diff TASK_REPO</code></h3>
+<p>Show how the tree differs from the dataset it publishes, per column.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>dataset<span class="w"> </span>diff<span class="w"> </span>~/swe-bench-multilingual-tasks
+</code></pre></div>
+<h3 id="swebench-dataset-push-task_repo"><code>swebench dataset push TASK_REPO</code></h3>
+<p>Overwrite the HuggingFace dataset named in <code>sweb.yaml</code>.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>dataset<span class="w"> </span>push<span class="w"> </span>~/swe-bench-tasks<span class="w"> </span>--dry-run
+swebench<span class="w"> </span>dataset<span class="w"> </span>push<span class="w"> </span>~/swe-bench-tasks
+</code></pre></div>
+<p>A task whose split is not published, <code>deprecated</code> for example, stays in the tree
+and can still be built by id, but never reaches the dataset.</p>
+<h3 id="swebench-dataset-collect-repos"><code>swebench dataset collect REPOS...</code></h3>
+<p>Scrape pull requests from GitHub into candidate task instances.</p>
+<div class="highlight"><pre><span></span><code>swebench<span class="w"> </span>dataset<span class="w"> </span>collect<span class="w"> </span>scikit-learn/scikit-learn
+swebench<span class="w"> </span>dataset<span class="w"> </span>collect<span class="w"> </span>psf/requests<span class="w"> </span>--max-pulls<span class="w"> </span><span class="m">200</span><span class="w"> </span>--cutoff-date<span class="w"> </span><span class="m">20230101</span>
+</code></pre></div>
+<p>Versioning candidate instances is no longer part of this CLI. That tooling lives with
+the task data, at <a href="https://github.com/SWE-bench/swe-bench-tasks/tree/main/src/versioning">swe-bench-tasks/src/versioning</a>.</p>
+<h2 id="older-invocations">Older invocations</h2>
+<p>Every module is still runnable directly, with the same arguments as before:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>swebench.harness.run_evaluation<span class="w"> </span>--dataset_name<span class="w"> </span>...<span class="w"> </span>--predictions_path<span class="w"> </span>...
+python<span class="w"> </span>-m<span class="w"> </span>swebench.image_builder.prepare_images<span class="w"> </span>--dataset_name<span class="w"> </span>...
+</code></pre></div>
+<p>The inference utilities are not exposed through <code>swebench</code> and are run this way:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>swebench.inference.run_api<span class="w"> </span>--help
+</code></pre></div>
 
 
 
@@ -1382,7 +1530,7 @@ to generate training data, and SWE-bench for evaluation.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../inference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inference">
+          <a href="../../guides/create_rag_datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create RAG Datasets">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1392,20 +1540,20 @@ to generate training data, and SWE-bench for evaluation.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Inference
+                Create RAG Datasets
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../api/harness/" class="md-footer__link md-footer__link--next" aria-label="Next: Harness">
+          <a href="../harness/" class="md-footer__link md-footer__link--next" aria-label="Next: The Harness">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Harness
+                The Harness
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1445,7 +1593,7 @@ to generate training data, and SWE-bench for evaluation.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
